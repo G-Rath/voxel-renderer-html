@@ -89,7 +89,7 @@ define (require) ->
 			_scratchSprite = new PIXI.Sprite tmp
 			_scratchContainer.addChild _scratchSprite
 
-			_renderTexture = new PIXI.RenderTexture _pixiRenderer, 100,100
+			_renderTexture = new PIXI.RenderTexture.create 100,100
 			_renderTextureSprite = new PIXI.Sprite _renderTexture
 
 			_stage.addChild _renderTextureSprite
@@ -101,7 +101,7 @@ define (require) ->
 
 			_pixiRenderer.resize(width, height)
 
-			_renderTexture = new PIXI.RenderTexture _pixiRenderer, width, height
+			_renderTexture = new PIXI.RenderTexture.create width, height
 			_renderTextureSprite.texture = _renderTexture
 
 			# calc 'origin' point such that voxel volume's bounds will be centered within canvas
@@ -126,7 +126,7 @@ define (require) ->
 
 			super()
 
-			_renderTexture.clear()
+			_pixiRenderer.clearRenderTexture _renderTexture, 0x000000
 
 			# real draw happens here
 			for i, color of hash
@@ -162,7 +162,7 @@ define (require) ->
 				_scratchSprite.texture = tex
 				_lastTexture = tex
 
-			_renderTexture.render _scratchContainer
+			_pixiRenderer.render _scratchContainer, _renderTexture
 
 
 		get2dPos: (voxelX, voxelY, voxelZ) ->
@@ -280,7 +280,7 @@ define (require) ->
 
 			# console.log 'makeBlockTexture - main', hexColor.toString(16), 'darker', darker.toString(16), 'lighter',lighter.toString(16)
 
-			return graphics.generateTexture()
+			return _pixiRenderer.generateTexture graphics
 
 
 	return IsometricRenderer

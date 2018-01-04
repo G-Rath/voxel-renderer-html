@@ -117,7 +117,7 @@ define(function(require) {
       tmp = this.makeBlockTexture(0xff8800);
       _scratchSprite = new PIXI.Sprite(tmp);
       _scratchContainer.addChild(_scratchSprite);
-      _renderTexture = new PIXI.RenderTexture(_pixiRenderer, 100, 100);
+      _renderTexture = new PIXI.RenderTexture.create(100, 100);
       _renderTextureSprite = new PIXI.Sprite(_renderTexture);
       _stage.addChild(_renderTextureSprite);
       return this.setSize(800, 600);
@@ -126,7 +126,7 @@ define(function(require) {
     IsometricRenderer.prototype.setSize = function(width, height) {
       var ht_y, top_y, w_full;
       _pixiRenderer.resize(width, height);
-      _renderTexture = new PIXI.RenderTexture(_pixiRenderer, width, height);
+      _renderTexture = new PIXI.RenderTexture.create(width, height);
       _renderTextureSprite.texture = _renderTexture;
       w_full = para_w * (this.maxX + 1) + para_w * (this.maxZ + 1);
       origin_x = Math.floor((width - w_full) / 2);
@@ -144,7 +144,7 @@ define(function(require) {
     IsometricRenderer.prototype.renderEnd = function() {
       var color, i;
       IsometricRenderer.__super__.renderEnd.call(this);
-      _renderTexture.clear();
+      _pixiRenderer.clearRenderTexture(_renderTexture, 0x000000);
       for (i in hash) {
         color = hash[i];
         this.drawCube(i, color);
@@ -172,7 +172,7 @@ define(function(require) {
         _scratchSprite.texture = tex;
         _lastTexture = tex;
       }
-      return _renderTexture.render(_scratchContainer);
+      return _pixiRenderer.render(_scratchContainer, _renderTexture);
     };
 
     IsometricRenderer.prototype.get2dPos = function(voxelX, voxelY, voxelZ) {
@@ -262,7 +262,7 @@ define(function(require) {
       graphics.lineTo(para_w, para_y2);
       graphics.lineTo(para_w, diamond_h);
       graphics.endFill();
-      return graphics.generateTexture();
+      return _pixiRenderer.generateTexture(graphics);
     };
 
     return IsometricRenderer;
