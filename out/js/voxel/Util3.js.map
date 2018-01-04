@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "Util3.js",
-  "sourceRoot": "../../../project/coffee/voxel/",
+  "sourceRoot": "..\\..\\..\\project\\coffee\\voxel\\",
   "sources": [
     "Util3.coffee"
   ],

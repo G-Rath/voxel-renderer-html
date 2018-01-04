@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "Controller.js",
-  "sourceRoot": "../../../project/coffee/demo/",
+  "sourceRoot": "..\\..\\..\\project\\coffee\\demo\\",
   "sources": [
     "Controller.coffee"
   ],

@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "TransSphere.js",
-  "sourceRoot": "../../../../project/coffee/voxel/objects/",
+  "sourceRoot": "..\\..\\..\\..\\project\\coffee\\voxel\\objects\\",
   "sources": [
     "TransSphere.coffee"
   ],

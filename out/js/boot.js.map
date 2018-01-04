@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "boot.js",
-  "sourceRoot": "../../project/coffee/",
+  "sourceRoot": "..\\..\\project\\coffee\\",
   "sources": [
     "boot.coffee"
   ],

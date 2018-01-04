@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "TransDisc.js",
-  "sourceRoot": "../../../../project/coffee/voxel/objects/",
+  "sourceRoot": "..\\..\\..\\..\\project\\coffee\\voxel\\objects\\",
   "sources": [
     "TransDisc.coffee"
   ],

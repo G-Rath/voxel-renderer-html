@@ -1368,7 +1368,7 @@ Shared
     Static class
  */
 define('demo/Shared',['require','jquery'],function(require) {
-  
+  "use strict";
   var $, Shared;
   $ = require('jquery');
   Shared = (function() {
@@ -1416,7 +1416,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/BaseObj',['require','three','voxel/Util3','demo/Shared'],function(require) {
-  
+  "use strict";
   var BaseObj, Shared, THREE, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -1531,7 +1531,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/Point',['require','three','voxel/objects/BaseObj'],function(require) {
-  
+  "use strict";
   var BaseObj, Point, THREE;
   THREE = require('three');
   BaseObj = require('voxel/objects/BaseObj');
@@ -1798,7 +1798,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/renderers/ThreeRenderer',['require','three','voxel/Util3','voxel/renderers/BaseRenderer'],function(require) {
-  
+  "use strict";
   var BaseRenderer, THREE, ThreeRenderer, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -19868,7 +19868,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/renderers/IsometricRenderer',['require','voxel/Util3','pixi','voxel/renderers/BaseRenderer'],function(require) {
-  
+  "use strict";
   var BaseRenderer, IsometricRenderer, PIXI, Util3;
   Util3 = require('voxel/Util3');
   PIXI = require('pixi');
@@ -20142,7 +20142,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransObj',['require','three','voxel/Util3','voxel/objects/BaseObj'],function(require) {
-  
+  "use strict";
   var BaseObj, THREE, TransObj, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -20267,7 +20267,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/FastObj',['require','three','voxel/Util3','voxel/objects/BaseObj'],function(require) {
-  
+  "use strict";
   var BaseObj, FastObj, THREE, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -20334,7 +20334,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/FastSphere',['require','three','voxel/objects/FastObj'],function(require) {
-  
+  "use strict";
   var FastObj, FastSphere, THREE;
   THREE = require('three');
   FastObj = require('voxel/objects/FastObj');
@@ -20403,7 +20403,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransSphere',['require','three','voxel/objects/TransObj'],function(require) {
-  
+  "use strict";
   var THREE, TransObj, TransSphere;
   THREE = require('three');
   TransObj = require('voxel/objects/TransObj');
@@ -20493,7 +20493,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransDisc',['require','three','voxel/Util3','voxel/objects/TransObj'],function(require) {
-  
+  "use strict";
   var THREE, TransDisc, TransObj, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -20549,7 +20549,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransBox',['require','three','voxel/Util3','voxel/objects/TransObj'],function(require) {
-  
+  "use strict";
   var THREE, TransBox, TransObj, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -20637,7 +20637,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransRect',['require','three','voxel/Util3','voxel/objects/TransObj'],function(require) {
-  
+  "use strict";
   var THREE, TransObj, TransRect, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -20711,7 +20711,7 @@ var __hasProp = {}.hasOwnProperty,
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/FastBox',['require','voxel/objects/FastObj'],function(require) {
-  
+  "use strict";
   var FastBox, FastObj;
   FastObj = require('voxel/objects/FastObj');
   FastBox = (function(_super) {
@@ -20801,7 +20801,7 @@ var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments)
   __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 define('voxel/objects/TransBitmap',['require','three','voxel/Util3','voxel/objects/TransRect'],function(require) {
-  
+  "use strict";
   var THREE, TransBitmap, TransRect, Util3;
   THREE = require('three');
   Util3 = require('voxel/Util3');
@@ -21007,7 +21007,7 @@ Model
 	A collection of view objects
  */
 define('demo/Model',['require','jquery','three','voxel/Util3','voxel/objects/BaseObj','voxel/objects/TransObj','voxel/objects/Point','voxel/objects/FastSphere','voxel/objects/TransSphere','voxel/objects/TransDisc','voxel/objects/TransBox','voxel/objects/TransRect','voxel/objects/FastBox','voxel/objects/TransBitmap','demo/Shared'],function(require) {
-  
+  "use strict";
   var $, BaseObj, FastBox, FastSphere, Model, Point, Shared, THREE, TransBitmap, TransBox, TransDisc, TransObj, TransRect, TransSphere, Util3;
   $ = require('jquery');
   THREE = require('three');
@@ -21115,7 +21115,7 @@ Controller
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 define('demo/Controller',['require','jquery','three','voxel/Util3','demo/Shared'],function(require) {
-  
+  "use strict";
   var $, Controller, Shared, THREE, Util3;
   $ = require('jquery');
   THREE = require('three');
@@ -21280,7 +21280,7 @@ define('demo/Controller',['require','jquery','three','voxel/Util3','demo/Shared'
 var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
 define('demo/Demo',['require','jquery','three','voxel/Util3','voxel/renderers/BaseRenderer','voxel/renderers/ThreeRenderer','voxel/renderers/IsometricRenderer','demo/Shared','demo/Model','demo/Controller'],function(require) {
-  
+  "use strict";
   var $, BaseRenderer, Controller, Demo, IsometricRenderer, Model, Shared, THREE, ThreeRenderer, Util3;
   $ = require('jquery');
   THREE = require('three');

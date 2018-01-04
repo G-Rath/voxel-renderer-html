@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "IsometricRenderer.js",
-  "sourceRoot": "../../../../project/coffee/voxel/renderers/",
+  "sourceRoot": "..\\..\\..\\..\\project\\coffee\\voxel\\renderers\\",
   "sources": [
     "IsometricRenderer.coffee"
   ],

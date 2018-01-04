@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "FastObj.js",
-  "sourceRoot": "../../../../project/coffee/voxel/objects/",
+  "sourceRoot": "..\\..\\..\\..\\project\\coffee\\voxel\\objects\\",
   "sources": [
     "FastObj.coffee"
   ],

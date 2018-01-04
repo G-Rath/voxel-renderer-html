@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "BaseObj.js",
-  "sourceRoot": "../../../../project/coffee/voxel/objects/",
+  "sourceRoot": "..\\..\\..\\..\\project\\coffee\\voxel\\objects\\",
   "sources": [
     "BaseObj.coffee"
   ],

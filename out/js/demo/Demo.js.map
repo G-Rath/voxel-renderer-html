@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "Demo.js",
-  "sourceRoot": "../../../project/coffee/demo/",
+  "sourceRoot": "..\\..\\..\\project\\coffee\\demo\\",
   "sources": [
     "Demo.coffee"
   ],

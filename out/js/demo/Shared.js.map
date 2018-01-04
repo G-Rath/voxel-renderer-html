@@ -1,7 +1,7 @@
 {
   "version": 3,
   "file": "Shared.js",
-  "sourceRoot": "../../../project/coffee/demo/",
+  "sourceRoot": "..\\..\\..\\project\\coffee\\demo\\",
   "sources": [
     "Shared.coffee"
   ],
