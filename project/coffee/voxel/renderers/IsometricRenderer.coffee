@@ -84,12 +84,12 @@ define (require) ->
 			_stage = new PIXI.Stage(0xe0e0e0)
 
 
-			_scratchContainer = new PIXI.DisplayObjectContainer
+			_scratchContainer = new PIXI.Container
 			tmp = @makeBlockTexture(0xff8800)
 			_scratchSprite = new PIXI.Sprite tmp
 			_scratchContainer.addChild _scratchSprite
 
-			_renderTexture = new PIXI.RenderTexture 100,100
+			_renderTexture = new PIXI.RenderTexture _pixiRenderer, 100,100
 			_renderTextureSprite = new PIXI.Sprite _renderTexture
 
 			_stage.addChild _renderTextureSprite
@@ -101,7 +101,7 @@ define (require) ->
 
 			_pixiRenderer.resize(width, height)
 
-			_renderTexture = new PIXI.RenderTexture width, height
+			_renderTexture = new PIXI.RenderTexture _pixiRenderer, width, height
 			_renderTextureSprite.texture = _renderTexture
 
 			# calc 'origin' point such that voxel volume's bounds will be centered within canvas
@@ -159,7 +159,7 @@ define (require) ->
 
 
 			if tex isnt _lastTexture
-				_scratchSprite.setTexture tex
+				_scratchSprite.texture = tex
 				_lastTexture = tex
 
 			_renderTexture.render _scratchContainer
